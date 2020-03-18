@@ -55,14 +55,14 @@
 
 
     void Board::dessinerPoint(Point &p){
-        wmove(m_boite, p.getY(), p.getX());
+        wmove(m_boite, p.getX(), p.getY());
         waddch(m_boite,'*');
         wrefresh(m_boite);
 
     }
 
     void Board::effacerPoint(Point &p){
-        wmove(m_boite, p.getY(), p.getX());
+        wmove(m_boite, p.getX(), p.getY());
         waddch(m_boite,' ');
         wrefresh(m_boite);
 

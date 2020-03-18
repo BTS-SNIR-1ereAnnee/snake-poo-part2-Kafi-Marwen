@@ -16,8 +16,11 @@
 	public:
 	    static Board *getInstance ();
 	    static void kill ();
-	    void dessinerPoint(Point &p);
+
+        void dessinerPoint(Point &p);
 	    void effacerPoint(Point &p);
+	    int m_sizeX,m_sizeY;
+	    
 	private:
 	    static Board *_singleton;
 	    WINDOW *m_boite;

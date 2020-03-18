@@ -44,7 +44,10 @@
 
   void Board::dessinerPlateau()
   {
-      this->m_boite = subwin(stdscr, 20, 30, 0, 0);
+    this->m_boite = subwin(stdscr, m_sizeX, m_sizeY, 0, 0);
+    this->m_sizeX=25;
+    this->m_sizeY=25;
+  
 
       box(this->m_boite, ACS_VLINE, ACS_HLINE); // ACS_VLINE et ACS_HLINE sont des constantes qui génèrent des bordures par défaut
       wrefresh(m_boite);

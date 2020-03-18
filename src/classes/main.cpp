@@ -50,7 +50,7 @@
 	    // pointeurs sur l'unique instance de la classe UniqueObject
 	    Board *fenetre;
 	    // initialisation des pointeurs
-	    fenetre = Board::etInstance ();
+	    fenetre = Board::getInstance ();
 
 	    snake serpent(10,4);
 

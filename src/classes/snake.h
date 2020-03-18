@@ -34,6 +34,9 @@
             void affichSerpent();
 
 
+            bool checkColisionWithBoard();
+
+
         private:
             /** tableau de point, corps du serpent*/
             Point serpent[50];

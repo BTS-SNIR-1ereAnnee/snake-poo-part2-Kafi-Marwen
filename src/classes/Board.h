@@ -19,7 +19,7 @@
 
 	    void dessinerPoint(Point &p);
 	    void effacerPoint(Point &p);
-	    int m_sizeX,m_sizeY;
+	    
 	    int getSizeY();
         int getSizeX();
 
@@ -29,6 +29,7 @@
 	    Board();
 	    ~Board();
 	    void dessinerPlateau();
+	    int m_sizeX,m_sizeY;
 
 	};
 

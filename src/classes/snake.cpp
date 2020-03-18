@@ -62,3 +62,6 @@
 
     }
 
+    bool Snake::checkColisionWithBoard()
+    {
+        checkColisionWithBoard=FALSE;

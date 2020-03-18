@@ -28,7 +28,7 @@
 
 
 
-	    ch = getch();
+	    ch = getch();  //Getch est une fonction équivalente a la fonction non curses getchar, elle permet la saisie de caractère.
 	    if( ch == ERR)
 	            r = FALSE;
 	    else
@@ -38,7 +38,7 @@
 	    }
 
 
-	    echo();
+	    echo();   // Pour supprimer l'écho automatique des caractères tapés.
 	    nodelay(stdscr, FALSE);
 	    return(r);
 	}
@@ -56,12 +56,12 @@
 
 
 
-
+       //Permet de gérer la direction
 		keypad (stdscr,true);
 		noecho();
 		while (true)
 		{
-
+           
 			if(kbhit()) {
 				switch (getch()){
 					case 259:
@@ -88,8 +88,8 @@
 			    serpent.move (direction);
 
 			}
-			serpent.affichSerpent();
-	        usleep (150000);
+			serpent.affichSerpent(); //Utilise la méthode afficheserpent avec la classe serpent.
+	        usleep (150000);   //vitesse du serpent
 
 		}
 	    //getchar();

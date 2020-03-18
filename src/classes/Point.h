@@ -1,4 +1,4 @@
-/**
+    /**
 classe permettant l'affichage d'un point
 */
 

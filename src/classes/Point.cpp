@@ -68,6 +68,7 @@
     {
         Board *b;
         b = Board::getInstance(); // dessine les points 
+        // dessine les points 
         b->dessinerPoint(*this);
     }
 

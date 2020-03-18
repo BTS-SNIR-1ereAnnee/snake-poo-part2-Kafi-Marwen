@@ -45,7 +45,7 @@ int kbhit(void)    /* Cette fonction retourne si une touche est appuyé par l'ut
 
 int main()
 {
-    int derniereDir=TOUCHE_KEY_DOWN;
+    int direction=TOUCHE_KEY_DOWN;
 
     // pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
@@ -65,19 +65,19 @@ int main()
 		if(kbhit()) {
 			switch (getch()){
 				case 259:
-					derniereDir = TOUCHE_KEY_UP;
+					direction = TOUCHE_KEY_UP;
 					serpent.move(TOUCHE_KEY_UP);
 					break;
 				case 260:
-					derniereDir = TOUCHE_KEY_LEFT;
+					direction = TOUCHE_KEY_LEFT;
 					serpent.move(TOUCHE_KEY_LEFT);
 					break;
 				case 258:
-				    derniereDir = TOUCHE_KEY_DOWN;
+				    direction = TOUCHE_KEY_DOWN;
 					serpent.move(TOUCHE_KEY_DOWN);
 					break;
 				case 261:
-				    derniereDir = TOUCHE_KEY_RIGHT;
+				    direction = TOUCHE_KEY_RIGHT;
 					serpent.move(TOUCHE_KEY_RIGHT);
 					break;
 			}
@@ -85,7 +85,7 @@ int main()
 
 
 		}else{ //move left
-		    serpent.move (derniereDir);
+		    serpent.move (direction);
 
 		}
 		serpent.affichSerpent();

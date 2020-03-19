@@ -1,4 +1,4 @@
-    /**
+/**
 classe permettant l'affichage d'un point
 */
 
@@ -73,3 +73,4 @@ private:
 };
 
 #endif // POINT_H
+

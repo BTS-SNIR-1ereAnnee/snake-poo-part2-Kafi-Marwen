@@ -62,7 +62,7 @@ void Board::dessinerPoint(Point &p){
 
 void Board::effacerPoint(Point &p){
     wmove(m_boite, p.getY(), p.getX());
-    waddch(m_boite,' ');             //RAJOUT DE GETCHAT AU CAS OU 
+    waddch(m_boite,' ');            
     wrefresh(m_boite);
 
 }

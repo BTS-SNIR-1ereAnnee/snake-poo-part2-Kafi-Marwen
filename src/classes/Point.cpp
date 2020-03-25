@@ -89,7 +89,7 @@ void Point::drawPoint()
 void Point::erasePoint()
 {
     Board *b;
-    b = Board::getInstance(); //efface les points
+    b = Board::getInstance(); 
     b->effacerPoint(*this);
 }
 

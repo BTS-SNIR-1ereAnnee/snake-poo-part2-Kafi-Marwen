@@ -6,6 +6,7 @@
 
 using namespace std ;
 
+//CONSTRUCTEUR PAR DEFAUT.
 snake::snake()
 {
     for(int x = 0; x < longeur; x++)
@@ -14,7 +15,7 @@ snake::snake()
     }
 }
 
-
+//CONSTRUCTEUR AVEC DES PARAMETRES
 snake::snake(int x,int y)
 {
     for(int d = 0; d < longeur; d++)
@@ -23,7 +24,7 @@ snake::snake(int x,int y)
     }
 }
 
-
+//Sert a affciher le serpent
 void snake::affichSerpent()
 {
     /**Parcours du tableau*/
@@ -33,6 +34,7 @@ void snake::affichSerpent()
     }
 }
 
+//Déplacement du snake
 void snake::move(int direction)
 {
     for(int d = longeur; d > 0 ; d--)
@@ -70,5 +72,9 @@ bool snake::checkColisionWithBoard()
     if (serpent[0].getY() == 0 || serpent[0].getY() == b->getYSize()-1) return TRUE;
     return FALSE;
 }
+
+
+
+
 
 

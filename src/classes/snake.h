@@ -2,8 +2,6 @@
 
 Classe de gestion du serpent (déplacement, manger fruits)
 */
-
-
 #include <iostream>
 #include "Point.h"
 #include "Board.h"
@@ -33,10 +31,14 @@ public:
     */
     void affichSerpent();
 
-    /** vérifie que le serpent ne touche pas les bords
+    /** vérifie que le serpent ne touche pas les bords et l'arrete en cas de colision.
     * \return true en cas de collision
     */
     bool checkColisionWithBoard();
+    
+     /*vérifie que le serpent ne se touche pas lui meme et l'arrete en cas de colision.
+     */
+    bool checkColisionWithSnake();
 
 
 private:

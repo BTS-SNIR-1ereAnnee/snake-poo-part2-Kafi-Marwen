@@ -1,3 +1,4 @@
+
 #include "Point.h"
 #include "snake.h"
 #include "Board.h"
@@ -6,7 +7,6 @@
 
 using namespace std ;
 
-//CONSTRUCTEUR PAR DEFAUT.
 snake::snake()
 {
     for(int x = 0; x < longeur; x++)
@@ -15,7 +15,7 @@ snake::snake()
     }
 }
 
-//CONSTRUCTEUR AVEC DES PARAMETRES
+
 snake::snake(int x,int y)
 {
     for(int d = 0; d < longeur; d++)
@@ -24,7 +24,7 @@ snake::snake(int x,int y)
     }
 }
 
-//Sert a affciher le serpent
+
 void snake::affichSerpent()
 {
     /**Parcours du tableau*/
@@ -34,7 +34,6 @@ void snake::affichSerpent()
     }
 }
 
-//Déplacement du snake
 void snake::move(int direction)
 {
     for(int d = longeur; d > 0 ; d--)
@@ -73,8 +72,14 @@ bool snake::checkColisionWithBoard()
     return FALSE;
 }
 
+bool snake::checkColisionWithSnake()
+{
 
+    for(int d = 1; d < longeur; d++){ /** on commence à 1 car 0 est la tete du serpent */
+       if( serpent[d] == serpent[0] ){
+            return true;
+        }
+    }
 
-
-
-
+    return false;
+}

@@ -8,28 +8,27 @@ using namespace std;
 Point::Point()
 {
     m_x = m_y = 10;
-	m_char ='*';            //@ a mettre ici apres 
+    m_caractere = '*';
+}
+
+Point::Point(char unCar)
+{
+    m_x = m_y = 10;
+    m_caractere = unCar;
 }
 Point::Point(int x, int y)
 {
     this->m_x = x;
     this->m_y = y;
-	m_char = '*';
+    m_caractere = '*';
 }
 
-Point::Point(int x, int y, char caractere)
+Point::Point(int x, int y, char unCar)
 {
     this->m_x = x;
     this->m_y = y;
-	m_char = caractere;
+    m_caractere = unCar;
 }
-
-Point::Point(char caractere)
-{
-	m_char = caractere;
-}
-
-
 
 void Point::setPoint(int x, int y)
 {
@@ -77,7 +76,7 @@ void Point::setY(int val)
     m_y = val;
 }
 
-//Sert a mettre les points.
+
 void Point::drawPoint()
 {
     Board *b;
@@ -85,11 +84,10 @@ void Point::drawPoint()
     b->dessinerPoint(*this);
 }
 
-//Sert a effacer les points.
 void Point::erasePoint()
 {
     Board *b;
-    b = Board::getInstance(); 
+    b = Board::getInstance(); //efface les points
     b->effacerPoint(*this);
 }
 
@@ -98,15 +96,17 @@ void Point::debug()
     cout << "(" << this->m_x << "," << this->m_y << ")";
 }
 
-//Setter du char
-void Point::setChar(char caractere){
-    m_char=caractere;
+
+char Point::getChar()
+{
+    return m_caractere;
 }
 
-//Getter du char
-char Point::getChar(){
-    return m_char;
-}    
+
+void Point::setChar(char val)
+{
+    m_caractere = val;
+}
 
 Point::~Point()
 {
@@ -114,3 +114,8 @@ Point::~Point()
 }
 
 
+bool std::operator==(Point const& a, Point const& b)
+{
+    if (a.getX() == b.getX() && a.getY() == b.getY()) return true;
+    return false;
+}
